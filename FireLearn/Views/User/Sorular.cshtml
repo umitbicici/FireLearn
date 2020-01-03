@@ -1,0 +1,66 @@
+﻿
+@using FireLearn.Models.Entity
+@model PagedList.IPagedList<FireLearn.Models.Kelime>
+
+    @using PagedList.Mvc
+@using PagedList;
+
+
+@{
+    ViewBag.Title = "Sorular";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+
+            <div class="card-body">
+                <h2 class="card-title text-center">Kelimeler</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Kelimes TR</th>
+                            <th scope="col">Kelime ING</th>
+                            <th scope="col">Kelime_Turu</th>
+                          
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+
+                                <th>@item.KelimeTR</th>
+                                <th>@item.KelimeING</th>
+                                <th>@item.Kelime_Turu</th>
+
+
+                            </tr>
+                            
+                        }
+                    <table class="table table-striped">
+                        @foreach (var item in Model)
+                        {
+                            
+
+                            <tr>
+                                <th><iframe width="100%" height="315" src=@item.Kelime_video frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></th>
+                            </tr>
+                        }
+                    </table>
+</tbody>
+                </table>
+
+
+                
+                @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("sorular", new { sayfa }))
+            </div>
+        </div>
+    </div>
+</div>

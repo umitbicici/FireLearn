@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head class="fab fa-gripfire">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FireLearn</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap-4.3.1.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/headerLogo.png">
+    <style>
+        .navbar {
+            background-color: #2b3648 !important;
+        }
+
+        .navbar-brand:hover {
+            color: #ffc000 !important;
+            transition: 0.6s;
+            padding-left: 30px;
+        }
+
+        .nav-link {
+            color: #FFFFFF !important;
+            font-size: 16px;
+            text-align: justify !important;
+        }
+
+            .nav-link:hover {
+                color: #ffc000 !important;
+                transition: 0.6s;
+                padding-left: 50px !important;
+            }
+
+        .btn-selector {
+            background-color: transparent;
+            color: #FFFFFF;
+        }
+
+            .btn-selector:hover {
+                color: #ffc000;
+            }
+
+        body {
+            background-size: cover;
+        }
+
+        .bodyBaslik {
+            color: white;
+        }
+
+        #cardBackground {
+            background-image: url("/images/cardBackground1.jpg");
+            background-repeat: round;
+        }
+
+        .carousel-inner img {
+            width: 600px;
+            height: 300px;
+            margin-left: 250px;
+        }
+    </style>
+</head>
+<body background="/images/abc.jpg">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <!-- Boşluk -->
+        <a class="navbar-brand" href="/home/index"><i class="fab fa-gripfire mr-sm-2"><b></i>FireLearn</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home/oturumAc"><i class="fas fa-sign-in-alt mr-sm-2"></i>Oturum Aç</a>
+                </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button type="button" class="btn btn-outline-warning mr-sm-2"><i class="fas fa-search"></i></button>
+                    @Html.ActionLink("Hesap Oluştur", "hesapEkle", "Home", null, new { @class = "btn btn-outline-warning"})
+
+                    </form>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-selector dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-globe"></i>
+
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button class="dropdown-item" type="button">Turkish</button>
+                            <button class="dropdown-item" type="button">Deutsch</button>
+                            <button class="dropdown-item" type="button">English</button>
+                            <button class="dropdown-item" type="button">Español</button>
+                            <button class="dropdown-item" type="button">Język polski</button>
+                            <button class="dropdown-item" type="button">Português Brasileiro</button>
+                            <button class="dropdown-item" type="button">Tiếng Việt</button>
+                            <button class="dropdown-item" type="button">中文（简体）</button>
+                            <button class="dropdown-item" type="button">Dansk</button>
+                            <button class="dropdown-item" type="button">Français</button>
+                            <button class="dropdown-item" type="button">日本語</button>
+                            <button class="dropdown-item" type="button">Italian</button>
+                        </div>
+                    </div>
+</div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center" id="cardBackground">
+        <h1 class="display-4"><strong>Dil Öğrenmenin En Kolay Yolu</strong></h1><br><br><br>
+    </div>
+    @RenderBody()
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap-4.3.1.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="fireLearnModelStoreContainer" CdmEntityContainer="fireLearnEntities2">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="fireLearnModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblKelime">
+      <EntityTypeMapping TypeName="fireLearnModel.tblKelime">
+        <MappingFragment StoreEntitySet="tblKelime">
+          <ScalarProperty Name="kelimeID" ColumnName="kelimeID" />
+          <ScalarProperty Name="kelimeTR" ColumnName="kelimeTR" />
+          <ScalarProperty Name="kelimeING" ColumnName="kelimeING" />
+          <ScalarProperty Name="kelimeTuru" ColumnName="kelimeTuru" />
+          <ScalarProperty Name="kelimeDerece" ColumnName="kelimeDerece" />
+          <ScalarProperty Name="kelimevideo" ColumnName="kelimevideo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblKurs">
+      <EntityTypeMapping TypeName="fireLearnModel.tblKurs">
+        <MappingFragment StoreEntitySet="tblKurs">
+          <ScalarProperty Name="kursID" ColumnName="kursID" />
+          <ScalarProperty Name="kursAdi" ColumnName="kursAdi" />
+          <ScalarProperty Name="kursDerece" ColumnName="kursDerece" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTamamlanan">
+      <EntityTypeMapping TypeName="fireLearnModel.tblTamamlanan">
+        <MappingFragment StoreEntitySet="tblTamamlanan">
+          <ScalarProperty Name="tamamlanankursID" ColumnName="tamamlanankursID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="kursID" ColumnName="kursID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="fireLearnModel.tblUsers">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="fireLearnModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="fireLearnModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="fireLearnModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="fireLearnModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="fireLearnModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="fireLearnModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="fireLearnModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="fireLearnModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="fireLearnModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
